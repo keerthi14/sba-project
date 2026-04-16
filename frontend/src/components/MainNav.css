@@ -1,0 +1,321 @@
+.main-nav {
+  background: linear-gradient(90deg, #111111 0%, #1f1f1f 60%, #991b1b 100%);
+  color: #fafafa;
+  border-bottom: 2px solid #7f1d1d;
+}
+
+.main-nav__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+}
+
+.main-nav__left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0;
+}
+
+.main-nav__drop {
+  position: relative;
+}
+
+.main-nav__drop:focus-within {
+  outline: none;
+}
+
+.main-nav__trigger {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+  padding: 10px 12px;
+  font-size: 0.875rem;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.main-nav__trigger::after {
+  content: '▾';
+  font-size: 0.55rem;
+  opacity: 0.85;
+}
+
+.main-nav__drop:hover > .main-nav__trigger,
+.main-nav__drop:focus-within > .main-nav__trigger {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* First-level dropdown — must NOT clip children: side flyouts use position:absolute; left:100% */
+.main-nav__panel {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  top: 100%;
+  min-width: 240px;
+  margin: 0;
+  padding: 6px 0;
+  overflow: visible;
+  background: #181818;
+  border: 1px solid #3a3a3a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.main-nav__drop:hover .main-nav__panel,
+.main-nav__drop:focus-within .main-nav__panel {
+  display: block;
+}
+
+.main-nav--force-close .main-nav__panel,
+.main-nav--force-close .main-nav__flyout {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.main-nav__panel-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__panel-list > li {
+  position: relative;
+}
+
+.main-nav__link-item {
+  display: block;
+  padding: 10px 14px;
+  color: #fafafa;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.main-nav__link-item:hover {
+  background: #2b2b2b;
+}
+
+/* Row that opens side flyout (Search by make / state / location) */
+.main-nav__flyout-wrap {
+  position: relative;
+  z-index: 0;
+}
+
+.main-nav__flyout-wrap:hover,
+.main-nav__flyout-wrap:focus-within {
+  z-index: 20;
+}
+
+.main-nav__submenu-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  color: #fafafa;
+  cursor: default;
+}
+
+.main-nav__chevron {
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.75;
+}
+
+.main-nav__flyout-wrap:hover > .main-nav__submenu-label,
+.main-nav__flyout-wrap:focus-within > .main-nav__submenu-label {
+  background: #2b2b2b;
+}
+
+/* Side panel — overlaps parent slightly so the pointer path stays :hover */
+.main-nav__flyout {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin-left: -6px;
+  min-width: 220px;
+  max-height: min(60vh, 360px);
+  overflow: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  padding: 6px 0;
+  background: #181818;
+  border: 1px solid #3a3a3a;
+  box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.3);
+  z-index: 60;
+  transition: opacity 0.08s ease, visibility 0.08s ease;
+}
+
+.main-nav__flyout::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 14px;
+  height: 100%;
+  min-height: 44px;
+}
+
+.main-nav__flyout-wrap:hover .main-nav__flyout,
+.main-nav__flyout-wrap:focus-within .main-nav__flyout {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.main-nav__flyout-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__flyout-btn {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fafafa;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.main-nav__flyout-btn:hover {
+  background: #2b2b2b;
+}
+
+.main-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-nav__link {
+  color: #fafafa;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.main-nav__cta {
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.main-nav__cta:hover {
+  filter: brightness(1.05);
+}
+
+.main-nav__lang {
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid var(--primary);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.main-nav__logout {
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  color: #fff;
+  border: 1px solid var(--primary);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.main-nav__logout:hover,
+.main-nav__lang:hover {
+  filter: brightness(1.05);
+}
+
+@media (max-width: 768px) {
+  .main-nav__inner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px;
+  }
+
+  .main-nav__left {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    gap: 0;
+  }
+
+  .main-nav__trigger {
+    white-space: nowrap;
+  }
+
+  /* Stack flyout below row on narrow screens */
+  .main-nav__flyout {
+    position: static;
+    left: auto;
+    top: auto;
+    margin-left: 0;
+    margin-top: 0;
+    box-shadow: none;
+    border-left: 3px solid #991b1b;
+    margin-bottom: 4px;
+    max-height: none;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: none;
+  }
+
+  .main-nav__flyout::before {
+    display: none;
+  }
+
+  .main-nav__flyout-wrap:hover .main-nav__flyout,
+  .main-nav__flyout-wrap:focus-within .main-nav__flyout {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .main-nav__right {
+    justify-content: flex-end;
+  }
+}
+
+
+.main-nav__link-btn {
+  background: none;
+  border: none;
+  color: #fafafa;
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.main-nav__link-btn:hover {
+  text-decoration: underline;
+}

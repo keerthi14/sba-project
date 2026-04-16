@@ -1,0 +1,150 @@
+.site-footer {
+  margin-top: 24px;
+  background: linear-gradient(180deg, #141414 0%, #0a0a0a 100%);
+  color: #e2e8f0;
+}
+
+.site-footer__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 16px;
+  display: grid;
+  grid-template-columns: 1.4fr repeat(6, 1fr);
+  gap: 18px;
+}
+
+.site-footer section h3,
+.site-footer section h4 {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.site-footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.site-footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.82rem;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer p {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #cbd5e1;
+}
+
+.site-footer__contact a {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.store-badges {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.store-btn {
+  border: 1px solid #3a3a3a;
+  background: #171717;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  text-align: left;
+  width: 100%;
+}
+
+.store-btn span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.store-btn small {
+  font-size: 0.62rem;
+  opacity: 0.85;
+}
+
+.store-btn strong {
+  font-size: 0.86rem;
+}
+
+.store-btn__icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.store-btn__icon--apple {
+  color: #fff;
+}
+
+.bbb-block {
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bbb-block__seal {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.bbb-block strong {
+  display: block;
+  font-size: 0.78rem;
+}
+
+.bbb-block span {
+  display: block;
+  font-size: 0.74rem;
+  color: #94a3b8;
+}
+
+.site-footer__legal {
+  border-top: 1px solid #3a3a3a;
+}
+
+.site-footer__legal p {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 16px 20px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.site-footer__legal a {
+  color: #cbd5e1;
+}
+
+@media (max-width: 1200px) {
+  .site-footer__inner {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

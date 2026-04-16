@@ -1,0 +1,507 @@
+.home-extra {
+  padding: 10px 16px 26px;
+  overflow-x: hidden;
+}
+
+.home-extra__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+  overflow-x: hidden;
+}
+
+.extra-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.extra-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.center-title {
+  text-align: center;
+}
+
+.extra-card h3 {
+  margin: 12px 0 8px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.extra-card p {
+  margin: 0 0 8px;
+  color: #475569;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 10px;
+  justify-content: center;
+}
+
+.chip-link {
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 0.78rem;
+  color: #1e293b;
+  background: #ffffff;
+}
+
+.chip-link--button {
+  cursor: pointer;
+}
+
+.chip-link--active {
+  background: #fee2e2;
+  border-color: #f87171;
+  color: #991b1b;
+}
+
+.vehicle-carousel,
+.feedback-carousel {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.vehicle-card,
+.feedback-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.vehicle-card {
+  box-shadow: 0 8px 20px rgba(148, 163, 184, 0.2);
+  animation: cardIn 0.25s ease;
+}
+
+.vehicle-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.vehicle-card h3 {
+  margin: 0 0 6px;
+  font-size: 0.98rem;
+}
+
+.vehicle-card p {
+  margin: 0 0 4px;
+  font-size: 0.82rem;
+}
+
+.btn-link {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 8px 0 10px;
+}
+
+.type-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  text-decoration: none;
+  color: #1e293b;
+  display: grid;
+  gap: 4px;
+  background: linear-gradient(180deg, #fff, #fff5f5);
+}
+
+.type-item__img {
+  width: 100%;
+  height: 90px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-bottom: 4px;
+}
+
+.states-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 6px;
+}
+
+.state-btn {
+  border: none;
+  background: transparent;
+  font-size: 0.78rem;
+  padding: 4px 0;
+  text-align: left;
+  cursor: pointer;
+  color: #b91c1c;
+}
+
+.state-btn:hover {
+  color: #7f1d1d;
+  text-decoration: underline;
+}
+
+.steps-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 10px;
+}
+
+.step-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.step-card span {
+  color: #b91c1c;
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+.step-card h4 {
+  margin: 6px 0;
+  font-size: 0.9rem;
+}
+
+.step-card p {
+  font-size: 0.8rem;
+}
+
+.feedback-card p {
+  margin: 0 0 8px;
+}
+
+.feedback-card {
+  border-left: 5px solid #ef4444;
+  animation: cardIn 0.25s ease;
+}
+
+.feedback-stars {
+  color: #f59e0b;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.carousel-arrow {
+  border: none;
+  background: #fff;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.carousel-arrow:hover {
+  background: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+}
+
+.carousel-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-arrow--left,
+.carousel-arrow--right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.carousel-arrow--left {
+  left: 0;
+}
+
+.carousel-arrow--right {
+  right: 0;
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-accordion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.faq-q-btn {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  background: #fff;
+  color: #7f1d1d;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-answer {
+  margin: 4px 0 0;
+  padding: 8px 10px;
+  border-left: 3px solid #ef4444;
+  background: #fff5f5;
+}
+
+.blog-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 8px;
+  background: #fff;
+}
+
+.blog-box img {
+  width: 86px;
+  height: 56px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.blog-box span {
+  display: block;
+  color: #64748b;
+  font-size: 0.78rem;
+  margin-top: 2px;
+}
+
+.tiny-btn--primary,
+.secondary,
+.chip-link--active {
+  background: #b91c1c;
+  color: #fff;
+  border-color: #b91c1c;
+}
+
+.tiny-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.tiny-actions .tiny-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+}
+
+/* Featured carousel style (match provided reference) */
+.featured-carousel-section {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.featured-carousel-section .center-title {
+  font-size: 1.3rem;
+  color: #111827;
+}
+
+.featured-chip-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+
+.featured-chip {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #4b5563;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  width: 100%;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.featured-carousel-section .chip-link--active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.featured-carousel-wrap {
+  margin: 12px 0;
+  padding: 0 18px;
+}
+
+.featured-carousel-viewport {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.featured-carousel-viewport::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.featured-vehicle-carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 14px;
+  width: 100%;
+}
+
+.featured-vehicle-card {
+  border: 1px solid #dbe1e8;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  background: #fff;
+  padding: 0;
+  overflow: hidden;
+}
+
+.featured-vehicle-carousel .featured-vehicle-card {
+  flex: 0 0 calc((100% - (14px * 3)) / 4);
+  min-width: 0;
+}
+
+.featured-vehicle-card img {
+  height: 180px;
+  border-radius: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.featured-vehicle-card h3 {
+  margin: 12px 12px 6px;
+}
+
+.featured-vehicle-card p {
+  margin: 0 12px 4px;
+}
+
+.featured-view-details {
+  width: 100%;
+  margin-top: 10px;
+  min-height: 34px;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.featured-actions {
+  margin-top: 8px;
+}
+
+.featured-view-all {
+  min-width: 170px;
+  min-height: 38px;
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+}
+
+.featured-view-all:hover {
+  background: var(--accent);
+}
+
+.featured-pill-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px 14px;
+  min-height: 42px;
+  width: 160px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  color: #fff;
+}
+
+.featured-pill-cta:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.featured-carousel__loading {
+  padding: 18px;
+  color: #334155;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .featured-chip-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featured-chip {
+    padding: 10px 12px;
+  }
+
+  .vehicle-carousel,
+  .feedback-carousel,
+  .type-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Keep featured carousel horizontal on small screens */
+  .featured-vehicle-carousel {
+    overflow-x: hidden;
+  }
+
+  .featured-vehicle-carousel .featured-vehicle-card {
+    flex: 0 0 85%;
+  }
+
+  .carousel-arrow--left,
+  .carousel-arrow--right {
+    position: static;
+    transform: none;
+  }
+
+  .carousel-wrap {
+    gap: 8px;
+  }
+}
